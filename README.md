@@ -77,28 +77,29 @@ python3 pptx_narrator.py [入力ファイル名] [出力ファイル名] [オプ
 
 ---
 
-## 実行例
+## 実行例 pptx_narrator.pptx参照
 
 ### 1. スピーカーノートの準備
 
 PowerPointファイルのスライドのスピーカーノートに、以下のようにナレーションのテキストを記述します。話者を切り替えたい行の先頭に `Speaker 1:` または `Speaker 2:` を追加します。
 
-> Speaker 1: こんにちは。本日は、私たちの新しいプロジェクトについてご説明します。
->
-> Speaker 2: まず、プロジェクトの背景からお話しします。市場には大きなチャンスがあります。
->
-> Speaker 1: その通りです。このチャンスを活かすため、私たちは新しいアプローチを提案します。
+> Speaker 1: 今日は、PowerPointのスピーカーノートを音声化する便利なツール「pptx_narrator.py」について話していきます。
+> Speaker 2: はい、これすごく面白いですよね。Google Gemini APIを使って、各スライドに自動でWAVファイルを挿入してくれるんですよ。
+> Speaker 1: しかも、話者を指定することで、こういう対話形式のナレーションも簡単に作れるんです。
+> Speaker 2: そうそう。声の種類や話すスピードもカスタマイズできるし、APIキーの安全管理にも対応してるから、安心して使えますよね。
+> Speaker 1: プレゼン資料にナレーションを入れたいときや、動画コンテンツを作るときにも重宝しそうです。
+> Speaker 2: うん、ナレーション作成のハードルがぐっと下がりますね。
 
 ### 2. コマンドの実行
 
-ターミナルで以下のコマンドを実行します。この例では、入力ファイル`test1.pptx`から音声付きの`test1a.pptx`を生成します。
+ターミナルで以下のコマンドを実行します。この例では、入力ファイル`pptx_narrator.pptx`から音声付きの`output.pptx`を生成します。
 
 ```bash
-python3 pptx_narrator.py test1.pptx test1a.pptx --name1 "Autonoe" --name2 "Algieba"
+python3 pptx_narrator.py pptx_narrator.pptx output.pptx --name1 "Autonoe" --name2 "Algieba"
 ```
 
 ### 3. 結果の確認
 
-実行が完了すると、指定した出力ファイル名（この例では `test1a.pptx`）で音声が埋め込まれたPowerPointファイルが生成されます。
+実行が完了すると、指定した出力ファイル名（この例では `output.pptx`）で音声が埋め込まれたPowerPointファイルが生成されます。
 
-また、処理中に生成された各スライドの音声ファイル（例: `test1-001.wav`, `test1-002.wav`...）がスクリプトと同じディレクトリに作成されます。
+また、処理中に生成された各スライドの音声ファイル（例: `pptx_narrator-001.wav`, `pptx_narrator-002.wav`...）がスクリプトと同じディレクトリに作成されます。
